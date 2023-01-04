@@ -1,3 +1,10 @@
+:root {
+  --border-radius: 15px;
+  --box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4),
+    0 0 4px inset rgb(175, 175, 175);
+  --border: 1px solid rgb(90, 90, 90);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +15,7 @@
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
@@ -15,6 +23,10 @@ body {
 
 button {
   padding: .5rem;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  border: var(--border);
 }
 
 #gameContainer {
@@ -22,7 +34,37 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   width: 100%;
   height: 100%;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+#inputText {
+  padding: .5rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  border: var(--border);
+}
+
+.score-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+
+  background: rgba(255, 255, 255, 0.74);
+
 }
