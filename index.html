@@ -16,14 +16,21 @@
 </head>
 
 <body>
-  <div id="gameContainer">
-    <div class="input-container">
-      <input type="text" placeholder="Enter guess separated by a space" id="inputText">
-      <button id="submitButton">Submit</button>
-    </div>
+  <form id="loginForm" action="login">
+    <h2>Login</h2>
+    <input id="loginMail" type="email" placeholder="E-mail" autocomplete="off">
+    <input id="loginPassword" type="password" placeholder="Password" autocomplete="off">
+    <input type="submit" value="Log in" onsubmit="">
+    <a href="register.html">New user? Register here</a>
+  </form>
+
+  <div id="startButtonContainer">
+    <p>If you don't want your highscore to be saved to your user, you can start playing without logging in:</p>
+    <button id="startGameButton">Start Game</button>
   </div>
 
-  <script src="game.js"></script>
+  <script src="js/userHandling.js"></script>
+  <script src="js/game.js"></script>
 </body>
 
 </html>
